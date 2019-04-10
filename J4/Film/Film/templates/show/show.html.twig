@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Film{% endblock %}
+
+{% block body %}
+
+    <div style="width: 50%; margin: 50px auto;" class="jumbotron">
+        <h1 style="text-align: center;" class="display-3">{{ film.title }}</h1>
+        <div style="width: 100%; text-align: center; padding: 20px 0">
+            <img style="width: 50%;" src="{{ film.img }}" alt="">
+        </div>
+        <p class="lead">{{ film.description }}</p>
+        <hr class="my-4">
+        <p>Réalisé par : {{ film.director | join(', ')}}</p>
+        <p>Casting : {{ film.actors | join(', ') }}</p>
+
+        <div style="width: 100%; display: flex; justify-content: space-between;">
+            <a class="btn btn-primary btn-lg" href="{{ path('show', {'id' : befor }) }}" role="button">Film precedent</a>
+
+            {% if film.id | length > after %}
+                <a class="btn btn-primary btn-lg" href="{{ path('show', {'id' : after }) }}" role="button">Film suivant</a>
+            {%  endif %}
+        </div>
+
+    </div>
+
+{% endblock %}

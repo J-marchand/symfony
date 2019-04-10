@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+
+
+    {% for userTabs in userTab %}
+        {% if (userTabs.age >= 18) %}
+            <p>L'utilisateur {{ userTabs.name }} a plus de 18 ans, il peut donc regarder le film</p>
+        {% else %}
+            <p>L'utilisateur {{ userTabs.name }} a moins de 18 ans, il ne peut donc pas regarder le film</p>
+        {% endif %}
+    {% endfor %}
+
+
+
+    {% for userTabs in userTab %}
+        {% if(userTabs.age%2 == 1) %}
+            <p>L'age de l'utlisateur {{ userTabs.name }} est impair</p>
+        {% elseif(userTabs.age%2 == 0) %}
+            <p>L'age de l'utlisateur {{ userTabs.name }} est pair</p>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DetailUserController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+
+                    <h1>{{ detailInfo.id }} id</h1>
+                    <div class="col-xs-2">
+                        <img src="http://lorempixel.com/200/200/people/1" class="img-responsive img-circle" />
+                    </div>
+                    <div class="col-xs-10">
+
+                            <p><strong class="text-uppercase">First Name</strong>{{ detailInfo.firstName }}</p>
+                            <p><strong class="text-uppercase">Last name :</strong>{{ detailInfo.lastName }}</p>
+                            <p><strong class="text-uppercase">Email :</strong> <a href="mailto:{{ detailInfo.email }}">{{ detailInfo.email }}</a></p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="/home" class="btn btn-primary">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

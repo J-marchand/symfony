@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdvertController!{% endblock %}
+
+{% block body %}
+
+        <div style="width: 50%; margin: 200px auto;" class="jumbotron">
+            <h1 class="display-3">{{ first.title }}</h1>
+            <p class="lead">Publié le {{ first.date | date("m/d/Y", "Europe/Paris") }}:  par {{ first.author }}</p>
+            <hr class="my-4">
+            <p>{{ first.content }}</p>
+        </div>
+
+        <div style="width: 50%; margin: 200px auto;" class="jumbotron">
+            <h1 class="display-3">{{ last.title }}</h1>
+            <p class="lead">Publié le {{ last.date | date("m/d/Y", "Europe/Paris") }}:  par {{ last.author }}</p>
+            <hr class="my-4">
+            <p>{{ last.content }}</p>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdvertController!{% endblock %}
+
+{% block body %}
+    {% for allEvent in adverts %}
+        <div style="width: 50%; margin: 200px auto;" class="jumbotron">
+            <h1 class="display-3">{{ allEvent.title }}</h1>
+            <p class="lead">Publié le {{ allEvent.date | date("m/d/Y", "Europe/Paris") }}:  par {{ allEvent.author }}</p>
+            <hr class="my-4">
+            <p>{{ allEvent.content }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

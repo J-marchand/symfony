@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdvertController!{% endblock %}
+
+{% block body %}
+    <!--<form style="width: 30%; margin: 200px auto;" action="{{ path('addConfirm') }}" method="POST">
+        <fieldset>
+            <legend>Ajouter un article</legend>
+            <div class="form-group">
+                <label>Titre</label>
+                <input name="title" type="text" class="form-control" placeholder="Nommez votre article">
+            </div>
+
+            <div class="form-group">
+                <label>Auteur</label>
+                <input name="author" type="text" class="form-control" placeholder="Votre Nom et prénom">
+            </div>
+
+            <div class="form-group">
+                <label>Contenu</label>
+                <input name="content" type="text" class="form-control" placeholder="Contenu de l'annonce">
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="Modif">
+
+        </fieldset>
+    </form>-->
+
+
+    {{ form(form) }}
+
+{% endblock %}

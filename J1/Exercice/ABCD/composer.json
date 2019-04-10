@@ -1,0 +1,9 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Acme\\": ["src"]
+    },
+    "files": ["src/Sp/ClassE.php"],
+    "classmap": ["salutation"]
+  }
+}

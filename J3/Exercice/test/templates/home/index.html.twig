@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Members</h1>
+                <table class="table table-striped">
+                    <tr>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th></th>
+                    </tr>
+
+                    {% for info in tabInfo %}
+
+                        <tr>
+                            <td>{{ info.firstName }}</td>
+                            <td>{{ info.lastName }}</td>
+                            <td><a href="{{ path('detail', {'id' : info.id }) }}" class="btn btn-primary">Details</a></td>
+                        </tr>
+
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

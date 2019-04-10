@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello People2Controller!{% endblock %}
+
+{% block body %}
+    <table>
+        <thead>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for tabInfs in tabInf %}
+
+                <tr>
+                    <th>{{ tabInfs.firstName }}</th>
+                    <th>{{ tabInfs.lastName }}</th>
+                    <th>{{ tabInfs.age }}</th>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}

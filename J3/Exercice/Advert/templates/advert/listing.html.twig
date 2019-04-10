@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdvertController!{% endblock %}
+
+{% block body %}
+<table style="width: 80%; margin: 0 auto;" class="table table-hover">
+    <thead>
+        <tr>
+            <th></th>
+            <th scope="col">Title</th>
+            <th scope="col">Date</th>
+            <th scope="col">Auteur</th>
+            <th scope="col">Contenu</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for list in advert %}
+        <tr class="table-active">
+            <td>{{ list.id }}</td>
+            <th scope="row">{{ list.title }}</th>
+            <td>{{ list.date | date("d/m/Y H:m", "Europe/Paris") }}</td>
+            <td>{{ list.author }}</td>
+            <td>{{ list.content }}</td>
+            <td><span class="badge badge-danger"><a href="/delete/{{ list.id }}">Supprimer</a></span></td>
+            <td><span class="badge badge-secondary"><a href="/update/{{ list.id }}">Modifier</a></span></td>
+            <td><span class="badge badge-pill badge-info"><a href="/show/{{ list.id }}">Voir</a></span></td>
+
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

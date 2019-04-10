@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Film{% endblock %}
+
+{% block body %}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Nom du film</th>
+            <th scope="col">Date de sortie</th>
+            <th scope="col">Realisateurs</th>
+            <th scope="col">Casting</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for list in film %}
+        <tr class="table-light">
+            <th scope="row">{{ list.title }}</th>
+            <td>{{ list.publichDate | date("d/m/Y H:m", "Europe/Paris")  }}</td>
+            <td>{{ list.director | join(', ')}}</td>
+            <td>{{ list.actors | join(', ') }}</td>
+            <td><span class="badge badge-secondary"><a style="color: black;" href="{{ path('show', {'id' : list.id }) }}">En savoir plus</a></span></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

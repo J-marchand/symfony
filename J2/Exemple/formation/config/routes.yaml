@@ -1,0 +1,45 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+contact:
+    path: /contact
+    controller: App\Controller\ContactController::contact
+
+calcul:
+    path: /contact/{choice}/{ch1}/{ch2}/{format}
+    defaults:
+        _controller: App\Controller\ContactController::calcul
+        format: html
+
+    requirements:
+        format: html
+
+forum:
+    path: /forum/{year}/{mounth}/{id}/{title}/{format}
+    defaults:
+        _controller: App\Controller\ForumController::Forum
+        format: html
+
+    requirements:
+        year: \d{4}
+        mounth: '^[01-12]+$'
+        id: \d+
+        format: html
+
+#people:
+    #path: /people/{lastName}/{firstName}/{age}
+    #controller: App\Controller\PeopleController::getPeople
+
+    #requirements:
+        #lastName: '([a-z]+)'
+        #firstName: '([a-z]+)'
+        #age: \d+
+
+calculForm:
+    path: /calculForm
+    controller: App\Controller\CalculController::Formulaire
+
+resultCalcul:
+    path: /resultCalcul
+    controller: App\Controller\CalculController::resultCalcul

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EventController!{% endblock %}
+
+{% block body %}
+    <h1>Liste des evenements</h1>
+
+
+
+        <select name="event">
+        {% for eventTabs in eventTab %}
+            <option value="{{ eventTabs.eventName }}">{{  loop.index }} - {{ eventTabs.eventName }}</option>
+        {% endfor %}
+        </select>
+
+{% endblock %}
