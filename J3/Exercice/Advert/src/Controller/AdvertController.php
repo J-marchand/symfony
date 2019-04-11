@@ -2,13 +2,15 @@
 
 namespace App\Controller;
 
-use App\Form\AdvertType;
+use App\Form\AdvertFormType;
+use App\Form\ApplicationFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Advert;
-
+use App\Entity\Image;
+use App\Entity\Application;
 
 class AdvertController extends AbstractController
 {
@@ -27,9 +29,11 @@ class AdvertController extends AbstractController
      */
     public function listing()
     {
+
         $advert = $this->getDoctrine()
             ->getRepository(Advert::class)
             ->findAll();
+
 
         return $this->render('advert/listing.html.twig', [
             'advert'  => $advert,
@@ -45,14 +49,10 @@ class AdvertController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $advert = new Advert();
 
-        $form = $this->createForm(AdvertType::class, $advert);
+        $form = $this->createForm(AdvertFormType::class, $advert);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            //$task = $form->getData();
-            //dump($task);
-            //dump($advert);
-
 
             $entityManager->persist($advert);
             $entityManager->flush();
@@ -110,7 +110,7 @@ class AdvertController extends AbstractController
         $advert = $entityManager->getRepository(Advert::class)
             ->find($id);
 
-        $form = $this->createForm(AdvertType::class, $advert);
+        $form = $this->createForm(AdvertFormType::class, $advert);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -220,9 +220,7 @@ class AdvertController extends AbstractController
         $entityManager = $this->get('doctrine')->getManager();
         $adverts = $entityManager->getRepository(Advert::class)->findByDate($search1, $search2);
 
-
         $last = end($adverts);
-
 
         return $this->render('advert/searchByDate.html.twig', [
             'adverts' => $adverts
@@ -241,10 +239,6 @@ class AdvertController extends AbstractController
         $first = (current($adverts));
         $last = (end($adverts));
 
-
-       // var_dump($adverts);
-        var_dump($first, $last);
-
         return $this->render('advert/searchBetween.html.twig', [
             'first' => $first,
             'last'  => $last,
@@ -254,15 +248,50 @@ class AdvertController extends AbstractController
     /**
      * @Route("/show/{id}", name="show")
      */
-    public function show($id)
+    public function show($id, request $request)
     {
-        $advert = $this->getDoctrine()
-            ->getRepository(Advert::class)
+        $entityManager = $this->getDoctrine()
+            ->getManager();;
+
+
+
+        $advert = $entityManager->getRepository(Advert::class)
             ->find($id);
 
 
+        $commentDetail = $entityManager
+            ->getRepository(Application::class)
+            ->findBy(['advert' => $advert]);
+
+
+
+
+        $comment = new Application();
+
+        $form = $this->createForm(ApplicationFormType::class, $comment);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+
+            $comment->setDate(new \DateTime());
+            $comment->setAdvert($advert);
+
+            $entityManager->persist($comment);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('show', array('id' => $id));
+        }
+
+
+
+
         return $this->render('advert/show.html.twig', [
+            'form' => $form->createView(),
             'advert'  => $advert,
+            'comment' => $commentDetail,
         ]);
     }
+
 }

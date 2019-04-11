@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20190404143246 extends AbstractMigration
+final class Version20190410090455 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,7 +22,9 @@ final class Version20190404143246 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('CREATE TABLE advert (id INT AUTO_INCREMENT NOT NULL, title VARCHAR(255) NOT NULL, date DATETIME NOT NULL, author VARCHAR(255) NOT NULL, content LONGTEXT NOT NULL, published TINYINT(1) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
+        $this->addSql('ALTER TABLE advert CHANGE image_id image_id INT DEFAULT NULL');
+        $this->addSql('ALTER TABLE advert ADD CONSTRAINT FK_54F1F40B3DA5256D FOREIGN KEY (image_id) REFERENCES image (id)');
+        $this->addSql('CREATE UNIQUE INDEX UNIQ_54F1F40B3DA5256D ON advert (image_id)');
     }
 
     public function down(Schema $schema) : void
@@ -30,6 +32,8 @@ final class Version20190404143246 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('DROP TABLE advert');
+        $this->addSql('ALTER TABLE advert DROP FOREIGN KEY FK_54F1F40B3DA5256D');
+        $this->addSql('DROP INDEX UNIQ_54F1F40B3DA5256D ON advert');
+        $this->addSql('ALTER TABLE advert CHANGE image_id image_id INT NOT NULL');
     }
 }

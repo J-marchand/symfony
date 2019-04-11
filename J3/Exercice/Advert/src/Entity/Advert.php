@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -43,10 +45,22 @@ class Advert
     private $published;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\image", cascade={"persist", "remove"})
+     * @ORM\OneToOne(targetEntity="App\Entity\Image", cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $image;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Application", mappedBy="advert")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $application;
+
+    public function __construct()
+    {
+        $this->advert = new ArrayCollection();
+        $this->application = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -121,6 +135,37 @@ class Advert
     public function setImage(image $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Application[]
+     */
+    public function getApplication(): Collection
+    {
+        return $this->application;
+    }
+
+    public function addApplication(Application $application): self
+    {
+        if (!$this->application->contains($application)) {
+            $this->application[] = $application;
+            $application->setAdvert($this);
+        }
+
+        return $this;
+    }
+
+    public function removeApplication(Application $application): self
+    {
+        if ($this->application->contains($application)) {
+            $this->application->removeElement($application);
+            // set the owning side to null (unless already changed)
+            if ($application->getAdvert() === $this) {
+                $application->setAdvert(null);
+            }
+        }
 
         return $this;
     }

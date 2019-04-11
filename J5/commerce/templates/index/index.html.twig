@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+{% block body %}
+    <div style="width: 50%; margin: 50px auto; display: flex; justify-content: space-between; ">
+        <div class="card text-white bg-success mb-3" style="max-width: 20rem; margin: 0 25px 0 0;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h4 class="card-title">Primary card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+        <div class="card text-white bg-success mb-3" style="max-width: 20rem; margin: 0 25px;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h4 class="card-title">Primary card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+        <div class="card text-white bg-success mb-3" style="max-width: 20rem; margin: 0 0 0 25px;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h4 class="card-title">Primary card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+
+    <table style="width: 50%; margin: 50px auto;" class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Nom du de la category</th>
+            <th scope="col">Produits restant</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+            {% for list in listing %}
+                    <tr class="table-success">
+                    <th scope="row">{{ list.category.name }}</th>
+                    <td><a style="color: black;" href="{{ path('detail', {'id' : list.category.id }) }}">{{ list.quantity }}</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

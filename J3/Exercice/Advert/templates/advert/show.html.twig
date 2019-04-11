@@ -4,14 +4,46 @@
 
 {% block body %}
 
-    <div style="width: 50%; margin: 200px auto;" class="jumbotron">
+    <div style="width: 50%; margin: 50px auto 0px auto;" class="jumbotron">
         <h1 class="display-3">{{ advert.title }}</h1>
         <p class="lead">Publié le {{ advert.date | date("m/d/Y", "Europe/Paris") }}:  par {{ advert.author }}</p>
+        <img src="{{ advert.image.url }}" alt="{{ advert.image.alt }}">
         <hr class="my-4">
         <p>{{ advert.content }}</p>
 
-        <p class="lead">
+        <div class="lead">
             <a class="btn btn-primary btn-lg" href="/" role="button">Revenir en arriere</a>
-        </p>
+        </div>
     </div>
+
+
+
+    {% for comments in comment %}
+
+        <div style="width: 50%; margin: 50px auto 0px auto;" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">{{ comments.date | date("d/m/Y H:m", "Europe/Paris")  }}</div>
+            <div class="card-body">
+                <h4 class="card-title">{{  comments.author }}</h4>
+                <p class="card-text">{{ comments.content }}</p>
+            </div>
+        </div>
+
+    {% endfor %}
+
+    <form style="width: 50%; margin: 50px auto;" action="{{ path('show', {'id' : advert.id}) }}" method="POST">
+        <fieldset>
+            <legend>Ajouter un commentaire</legend>
+
+            {{ form_start(form) }}
+
+            {{ form_row(form.author, { 'label' : 'Votre Nom' }) }}
+            {{ form_row(form.content, { 'label' : 'Votre Message' }) }}
+            {{ form_row(form.Commenter) }}
+
+            {{ form_end(form) }}
+        </fieldset>
+    </form>
+
+
+
 {% endblock %}
