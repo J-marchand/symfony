@@ -17,20 +17,24 @@ class AppFixtures extends Fixture implements OrderedFixtureInterface
     {
         $faker = Factory::create();
 
-        $advert1 = new Advert();
-        $advert1->setDate($faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null))
+        for($i = 0; $i < 10; $i++)
+        {
+            $advert1 = new Advert();
+            $advert1->setDate($faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null))
                 ->setTitle($faker->sentence($nbWords = 2, $variableNbWords = true))
                 ->setAuthor($faker->name)
                 ->setContent($faker->$nbWords = 100, $variableNbWords = true)
-                ->setImage($manager->merge($this->getReference('image1')))// On recupere la reference dans l'ordre 1
+                ->setImage($manager->merge($this->getReference('image1'.$i)))// On recupere la reference dans l'ordre 1
+                ->addCategory($this->getReference('category'.$i))
                 ->setPublished(true);
-        $manager->persist($advert1);// en persistant advert, on persiste aussi image
+            $manager->persist($advert1);// en persistant advert, on persiste aussi image
 
-        $manager->flush();
+            $manager->flush();
+        }
     }
 
     public function getOrder()
     {
-        return 2;
+        return 3;
     }
 }

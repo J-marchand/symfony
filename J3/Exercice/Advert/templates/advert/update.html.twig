@@ -28,6 +28,14 @@
         </fieldset>
     </form>-->
 
-    {{form(form) }}
+    <form style="width: 50%; margin: 50px auto;" action="{{ path('update') }}" method="POST">
+        <fieldset>
+            <legend>Ajouter une Annonce</legend>
+
+            {{ form_start(form) }}
+            {{ form_end(form) }}
+
+        </fieldset>
+    </form>
     
 {% endblock %}

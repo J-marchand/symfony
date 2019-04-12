@@ -16,7 +16,9 @@ class ImageFixture extends Fixture implements OrderedFixtureInterface
 
     public function load(ObjectManager $manager)
     {
-            $faker = Factory::create();
+        $faker = Factory::create();
+
+        for($i = 0; $i < 10; $i++){
 
             $image1 = new Image();
             $image1->setUrl($faker->imageUrl(200, 200, 'cats', true, 'Faker'));
@@ -25,7 +27,8 @@ class ImageFixture extends Fixture implements OrderedFixtureInterface
 
             $manager->flush();
 
-            $this->addReference('image1', $image1); // on ajoute la reference
+            $this->addReference('image1'.$i, $image1); // on ajoute la reference
+        }
     }
 
 

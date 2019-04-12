@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+
 use App\Form\AdvertFormType;
 use App\Form\ApplicationFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -9,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Advert;
+use App\Entity\Category;
 use App\Entity\Image;
 use App\Entity\Application;
 
@@ -47,6 +49,14 @@ class AdvertController extends AbstractController
     {
 
         $entityManager = $this->getDoctrine()->getManager();
+
+        $category = $this->getDoctrine()
+            ->getRepository(Category::class)
+            ->findAll();
+
+        //var_dump($category);
+
+
         $advert = new Advert();
 
         $form = $this->createForm(AdvertFormType::class, $advert);
@@ -60,7 +70,10 @@ class AdvertController extends AbstractController
             return $this->redirectToRoute('listing');
         }
 
-        return $this->render('advert/add.html.twig', ['form'=>$form->createView()]);
+        return $this->render('advert/add.html.twig', [
+            'form'=>$form->createView(),
+            'category' => $category,
+        ]);
 
 
     }
@@ -198,11 +211,10 @@ class AdvertController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
 
         $advert = $entityManager
-            ->getRepository(Advert::class)
-            ->findBy(
-                [
-                    'title' => $search
-                ]);
+            ->getRepository(Category::class)
+            ->findByLetterA($search);
+
+        var_dump($advert);
 
         return $this->render('advert/search.html.twig', [
             'advert' => $advert,
@@ -250,19 +262,14 @@ class AdvertController extends AbstractController
      */
     public function show($id, request $request)
     {
-        $entityManager = $this->getDoctrine()
-            ->getManager();;
-
-
+        $entityManager = $this->getDoctrine()->getManager();
 
         $advert = $entityManager->getRepository(Advert::class)
             ->find($id);
 
-
         $commentDetail = $entityManager
             ->getRepository(Application::class)
             ->findBy(['advert' => $advert]);
-
 
 
 

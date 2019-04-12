@@ -37,6 +37,7 @@ class IndexController extends AbstractController
     {
 
         $em = $this->getDoctrine()->getManager();
+
         $category = $em->getRepository(Category::class)->find($id);
         var_dump($category);
 

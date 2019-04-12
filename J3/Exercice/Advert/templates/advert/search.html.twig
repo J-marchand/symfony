@@ -6,14 +6,13 @@
 
     <p class="lead"><small>Resultat de la recherche pour</small> : <strong>{{ search }}</strong></p>
 
-    <div style="width: 50%; margin: 200px auto;" class="jumbotron">
-        <h1 class="display-3">{{ advert[0].title }}</h1>
-        <p class="lead">Publié le : {{ advert[0].date | date("m/d/Y", "Europe/Paris") }} par {{ advert[0].author }}</p>
-        <hr class="my-4">
-        <p>{{ advert[0].content }}</p>
+    {% if(advert != null) %}
+        {% for CategoryByLetter in advert %}
+            <p> {{ CategoryByLetter.name }}</p>
+        {%  endfor %}
+    {% elseif(advert == null) %}
+        <p>Aucune categorie trouvé avec cette lettre</p>
+    {% endif %}
 
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="/" role="button">Revenir en arriere</a>
-        </p>
-    </div>
+
 {% endblock %}
