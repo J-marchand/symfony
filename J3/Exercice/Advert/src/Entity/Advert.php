@@ -61,11 +61,13 @@ class Advert
      */
     private $category;
 
+
     public function __construct()
     {
         $this->advert = new ArrayCollection();
         $this->application = new ArrayCollection();
         $this->category = new ArrayCollection();
+        $this->skills = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -201,4 +203,6 @@ class Advert
 
         return $this;
     }
+
+
 }

@@ -5,37 +5,22 @@
 {% block body %}
 
 
-    <!--<form style="width: 30%; margin: 200px auto;" action="{{ path('updateConfirm', {'id' : advert.id}) }}" method="POST">
-        <fieldset>
-            <legend>Modifier l'article n*{{ advert.id }}</legend>
-            <div class="form-group">
-                <label>Titre</label>
-                <input name="title" type="text" class="form-control" value="{{ advert.title }}">
-            </div>
 
-            <div class="form-group">
-                <label>Auteur</label>
-                <input name="author" type="text" class="form-control" value="{{ advert.author }}">
-            </div>
 
-            <div class="form-group">
-                <label>Contenu</label>
-                <input name="content" type="text" class="form-control" value="{{ advert.content }}">
-            </div>
-
-            <input type="submit" class="btn btn-primary" value="Modif">
-
-        </fieldset>
-    </form>-->
-
-    <form style="width: 50%; margin: 50px auto;" action="{{ path('update') }}" method="POST">
+    <form style="width: 50%; margin: 50px auto;" action="{{ path('update', {'id' : advert.id}) }}" method="POST">
         <fieldset>
             <legend>Ajouter une Annonce</legend>
 
             {{ form_start(form) }}
+
+            {{ form_widget(form) }}
+            <input type="submit" value="Modifier une annonce">
+
             {{ form_end(form) }}
+
+
 
         </fieldset>
     </form>
-    
+
 {% endblock %}

@@ -16,19 +16,35 @@
         </tr>
     </thead>
     <tbody>
+
+
+
     {% for list in advert %}
-        <tr class="table-active">
-            <td>{{ list.id }}</td>
-            <th scope="row">{{ list.title }}</th>
-            <td>{{ list.date | date("d/m/Y H:m", "Europe/Paris") }}</td>
-            <td>{{ list.author }}</td>
-            <td>{{ list.content }}</td>
+
+            <td>{{ list.advert.id }}</td>
+            <th scope="row">{{ list.advert.title }}</th>
+            <td>{{ list.advert.date | date("d/m/Y H:m", "Europe/Paris") }}</td>
+            <td>{{ list.advert.author }}</td>
+            <td>{{ list.advert.content }}</td>
+
+            <td>
+                <ul>
+                    {% for skill in list.skill %}
+                        <li>{{ skill.name }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+
+            <td>
+                Niveau : {{ list.level.name }}
+            </td>
             <td><span class="badge badge-danger"><a href="/delete/{{ list.id }}">Supprimer</a></span></td>
             <td><span class="badge badge-secondary"><a href="/update/{{ list.id }}">Modifier</a></span></td>
             <td><span class="badge badge-pill badge-info"><a href="/show/{{ list.id }}">Voir</a></span></td>
 
         </tr>
     {% endfor %}
+
     </tbody>
 </table>
 {% endblock %}

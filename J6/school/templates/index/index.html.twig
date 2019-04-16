@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+
+{% block body %}
+
+    {% for listFormation in all %}
+
+        {{ dump(listFormation) }}
+
+    {% endfor %}
+
+{% endblock %}

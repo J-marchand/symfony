@@ -3,8 +3,11 @@
 namespace App\Controller;
 
 
+use App\Entity\Inter;
+use App\Entity\Skill;
 use App\Form\AdvertFormType;
 use App\Form\ApplicationFormType;
+use App\Form\InterType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,11 +34,9 @@ class AdvertController extends AbstractController
      */
     public function listing()
     {
-
         $advert = $this->getDoctrine()
-            ->getRepository(Advert::class)
+            ->getRepository(Inter::class)
             ->findAll();
-
 
         return $this->render('advert/listing.html.twig', [
             'advert'  => $advert,
@@ -54,17 +55,16 @@ class AdvertController extends AbstractController
             ->getRepository(Category::class)
             ->findAll();
 
-        //var_dump($category);
+        $inter = new Inter();
 
-
-        $advert = new Advert();
-
-        $form = $this->createForm(AdvertFormType::class, $advert);
+        $form = $this->createForm(InterType::class, $inter);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $entityManager->persist($advert);
+            $inter->getAdvert()->setDate(new \DateTime());
+
+            $entityManager->persist($inter);
             $entityManager->flush();
 
             return $this->redirectToRoute('listing');
@@ -74,97 +74,34 @@ class AdvertController extends AbstractController
             'form'=>$form->createView(),
             'category' => $category,
         ]);
-
-
     }
 
-    /**
-     * @Route("/add/confirm", name="addConfirm")
-     */
-    public function addConfirm()
-    {
-        var_dump($_POST);
-
-        $title      = $_POST['title'];
-        $author     = $_POST['author'];
-        $content    = $_POST['content'];
-
-        $entityManager = $this->getDoctrine()->getManager();
-
-        $advert = new Advert();
-        $advert->setTitle($title);
-        $advert->setDate(new \DateTime());
-        $advert->setAuthor($author);
-        $advert->setContent($content);
-        $advert->setPublished('true');
-
-        $entityManager->persist($advert);
-
-        $entityManager->flush();
-
-        return $this->redirectToRoute('listing');
-    }
 
     /**
      * @Route("/update/{id}", name="update")
      */
     public function update($id, request $request)
     {
-        /*$advert = $this->getDoctrine()
-            ->getRepository(Advert::class)
-            ->find($id);
-
-        return $this->render('advert/update.html.twig', [
-            'advert' => $advert,
-        ]);*/
 
         $entityManager = $this->getDoctrine()->getManager();
 
-        $advert = $entityManager->getRepository(Advert::class)
+        $inter = $entityManager->getRepository(Inter::class)
             ->find($id);
 
-        $form = $this->createForm(AdvertFormType::class, $advert);
+        $form = $this->createForm(InterType::class, $inter);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            //$task = $form->getData();
-            //dump($task);
-            //dump($advert);
 
             $entityManager->flush();
 
             return $this->redirectToRoute('listing');
         }
 
-        return $this->render('advert/add.html.twig', [
+        return $this->render('advert/update.html.twig', [
             'form'=>$form->createView(),
+            'advert' => $inter,
         ]);
-    }
-
-    /**
-     * @Route("/update/{id}/confirm", name="updateConfirm")
-     */
-    public function updateConfirm($id)
-    {
-
-        var_dump($_POST);
-
-        $title      = $_POST['title'];
-        $author     = $_POST['author'];
-        $content    = $_POST['content'];
-
-        $entityManager = $this->getDoctrine()->getManager();
-        $advert = $entityManager->getRepository(Advert::class)->find($id);
-
-        $advert->setTitle($title);
-        $advert->setDate(new \DateTime());
-        $advert->setAuthor($author);
-        $advert->setContent($content);
-        $advert->setPublished('true');
-
-        $entityManager->flush();
-
-        return $this->redirectToRoute('listing');
     }
 
     /**
@@ -172,8 +109,12 @@ class AdvertController extends AbstractController
      */
     public function delete($id)
     {
+
+        var_dump($id);
+
+
         $advert = $this->getDoctrine()
-            ->getRepository(Advert::class)
+            ->getRepository(Inter::class)
             ->find($id);
 
 
@@ -192,8 +133,10 @@ class AdvertController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
 
         $advert = $entityManager
-            ->getRepository(Advert::class)
+            ->getRepository(Inter::class)
             ->find($id);
+
+
 
         $entityManager->remove($advert);
         $entityManager->flush();
@@ -264,14 +207,12 @@ class AdvertController extends AbstractController
     {
         $entityManager = $this->getDoctrine()->getManager();
 
-        $advert = $entityManager->getRepository(Advert::class)
+        $advert = $entityManager->getRepository(Inter::class)
             ->find($id);
 
         $commentDetail = $entityManager
             ->getRepository(Application::class)
             ->findBy(['advert' => $advert]);
-
-
 
         $comment = new Application();
 

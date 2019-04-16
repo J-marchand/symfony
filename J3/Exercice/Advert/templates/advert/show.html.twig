@@ -5,18 +5,20 @@
 {% block body %}
 
     <div style="width: 50%; margin: 50px auto 0px auto;" class="jumbotron">
-        <h1 class="display-3">{{ advert.title }}</h1>
-        <p class="lead">Publié le {{ advert.date | date("m/d/Y", "Europe/Paris") }}:  par {{ advert.author }}</p>
-        <img src="{{ advert.image.url }}" alt="{{ advert.image.alt }}">
+        <h1 class="display-3">{{ advert.advert.title }}</h1>
+        <p class="lead">Publié le {{ advert.advert.date | date("m/d/Y", "Europe/Paris") }}:  par {{ advert.advert.author }}</p>
+        <img src="{{ advert.advert.image.url }}" alt="{{ advert.advert.image.alt }}">
         <hr class="my-4">
-        <p>{{ advert.content }}</p>
+        <p>{{ advert.advert.content }}</p>
 
         <div class="lead">
             <a class="btn btn-primary btn-lg" href="/" role="button">Revenir en arriere</a>
         </div>
     </div>
 
-    {% for comments in comment %}
+    {{ dump(comment) }}
+
+{#{% for comments in comment %}
 
         <div style="width: 50%; margin: 50px auto 0px auto;" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
             <div class="card-header">{{ comments.date | date("d/m/Y H:m", "Europe/Paris")  }}</div>
@@ -27,6 +29,8 @@
         </div>
 
     {% endfor %}
+
+    {{ dump(advert) }}
 
     <form style="width: 50%; margin: 50px auto;" action="{{ path('show', {'id' : advert.id}) }}" method="POST">
         <fieldset>
@@ -40,7 +44,8 @@
 
             {{ form_end(form) }}
         </fieldset>
-    </form>
+    </form>#}
+
 
 
 

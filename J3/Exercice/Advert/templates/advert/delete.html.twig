@@ -4,13 +4,15 @@
 
 {% block body %}
 
+
     <div style="width: 50%; margin: 200px auto;" class="jumbotron">
-        <h1 class="display-3">{{ advert.title }}</h1>
-        <p class="lead">Publié le : {{ advert.date | date("m/d/Y", "Europe/Paris") }} par {{ advert.author }}</p>
+        <h1 class="display-3">{{ advert.advert.title }}</h1>
+        <p class="lead">Publié le : {{ advert.advert.date | date("m/d/Y", "Europe/Paris") }} par {{ advert.advert.author }}</p>
         <hr class="my-4">
-        <p>{{ advert.content }}</p>
+        <p>{{ advert.advert.content }}</p>
         <p class="lead">
             <a class="btn btn-primary btn-lg" href="/delete/{{ advert.id }}/confirm" role="button">Supprimer</a>
         </p>
     </div>
+
 {% endblock %}

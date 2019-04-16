@@ -20,7 +20,6 @@ class AdvertFormType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('date', DateTimeType::class)
             ->add('author')
             ->add('content')
             ->add('published')
@@ -31,7 +30,6 @@ class AdvertFormType extends AbstractType
                 'expanded' => true,
                 'choice_label' => 'name',
             ])
-            ->add('save', SubmitType::class)
         ;
     }
 
