@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AddController!{% endblock %}
+
+{% block body %}
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+    <form style="width: 50%; margin: 50px auto;" action="{{ path('add') }}" method="post">
+        <fieldset>
+            <legend>Nouvelle annonce</legend>
+
+            {{ form_start(form) }}
+                {{ form_widget(form) }}
+
+            <input type="submit" value="Enregistrer">
+            {{ form_end(form) }}
+
+        </fieldset>
+    </form>
+
+{% endblock %}

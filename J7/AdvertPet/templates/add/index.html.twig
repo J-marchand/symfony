@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AddController!{% endblock %}
+
+{% block body %}
+
+    <style>
+
+        input
+        {
+            margin: 10px 0;
+        }
+    </style>
+
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+    <form style="width: 50%; margin: 50px auto;" action="{{ path('add') }}" method="post">
+        {{ form_start(form) }}
+
+
+        {{ form_label(form.name, 'Nom de l\'animal :') }}
+        {{ form_widget(form.name) }}
+
+        {{ form_label(form.price, 'Déterminez un prix entre 1000 et 2000€') }}
+        {{ form_widget(form.price) }}
+
+        {{ form_label(form.race, 'Race de l\'animal :') }}
+        {{ form_widget(form.race) }}
+
+        {{ form_label(form.gender, 'Genre de l\'animal :') }}
+        {{ form_widget(form.gender) }}
+
+
+
+        <input type="submit" value="Enregistrer">
+
+        {{ form_end(form) }}
+
+
+    </form>
+
+{% endblock %}

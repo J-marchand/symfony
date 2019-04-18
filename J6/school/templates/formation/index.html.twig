@@ -4,4 +4,17 @@
 
 {% block body %}
 
+    <div style="width: 80%; margin: 50px auto;" class="jumbotron">
+        <h1 class="display-3">{{ formation.name }}</h1>
+
+        <p class="lead">Dans ce cours, vous pourrez etudier ces matieres :</p>
+
+            <ul>
+            {% for module in formation.module %}
+                 <li>{{ module.name }} ({{ module.time }})</li>
+            {% endfor %}
+            </ul>
+            <hr class="my-4">
+            <p>Votre prof sera {{ formation.teacher }}</p>
+    </div>
 {% endblock %}

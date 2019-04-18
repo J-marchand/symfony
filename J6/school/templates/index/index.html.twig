@@ -5,10 +5,23 @@
 
 {% block body %}
 
-    {% for listFormation in all %}
+    <h1 style="text-align: center;">Nos formations</h1>
 
-        {{ dump(listFormation) }}
+    <div style="display: flex; justify-content: space-between; width: 70%; margin: 50px auto">
 
+
+    {% for listFormation in allFormation %}
+
+        <div class="card text-white bg-light mb-3" style="min-width: 33%">
+
+            <div class="card-body">
+                <h4 class="card-title">{{ listFormation.name }}</h4>
+                <p class="card-text">Session réalisé par {{ listFormation.teacher }}</p>
+            </div>
+            <a style="padding: 10px; text-align: right; color: white;" href="{{ path('formation', {'id' : listFormation.id }) }}">En savoir plus</a>
+
+        </div>
     {% endfor %}
+    </div>
 
 {% endblock %}

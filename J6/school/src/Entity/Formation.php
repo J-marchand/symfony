@@ -33,15 +33,10 @@ class Formation
      */
     private $module;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Center", mappedBy="formation")
-     */
-    private $centers;
 
     public function __construct()
     {
         $this->module = new ArrayCollection();
-        $this->centers = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -95,34 +90,6 @@ class Formation
     {
         if ($this->module->contains($module)) {
             $this->module->removeElement($module);
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Center[]
-     */
-    public function getCenters(): Collection
-    {
-        return $this->centers;
-    }
-
-    public function addCenter(Center $center): self
-    {
-        if (!$this->centers->contains($center)) {
-            $this->centers[] = $center;
-            $center->addFormation($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCenter(Center $center): self
-    {
-        if ($this->centers->contains($center)) {
-            $this->centers->removeElement($center);
-            $center->removeFormation($this);
         }
 
         return $this;
