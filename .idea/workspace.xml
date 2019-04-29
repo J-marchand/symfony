@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f05bbabd-ae34-4b05-81b9-b0de7056488b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Final Project/ecommerce/public/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/J8/Test/src/hello.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/J8/Test/src/service.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/src/Controller/FormationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/J6/school/src/Controller/FormationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/J6/school/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/src/Entity/Center.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/src/Entity/Formation.php" beforeDir="false" afterPath="$PROJECT_DIR$/J6/school/src/Entity/Formation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/src/Migrations/Version20190416133012.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/src/Migrations/Version20190416134650.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/src/Migrations/Version20190416135526.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/src/Repository/CenterRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/J6/school/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/templates/formation/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/J6/school/templates/formation/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/J6/school/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/J6/school/templates/index/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,34 +32,19 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/J7/AdvertPet/src/Controller/IndexController.php">
+            <entry file="file://$PROJECT_DIR$/Final Project/ecommerce/templates/home/index.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="14" selection-start-line="14" selection-end-line="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/J7/AdvertPet/src/Controller/AddController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-                  <folding>
-                    <element signature="e#34#53#0#PHP" expanded="true" />
-                  </folding>
+                <state relative-caret-position="90">
+                  <caret line="6" selection-start-line="6" selection-end-line="6" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/J7/AdvertPet/src/DataFixtures/PetFixture.php">
+            <entry file="file://$PROJECT_DIR$/Final Project/ecommerce/templates/base.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-                  <folding>
-                    <element signature="e#36#79#0#PHP" expanded="true" />
-                  </folding>
+                <state relative-caret-position="105">
+                  <caret line="34" column="95" selection-start-line="34" selection-start-column="95" selection-end-line="34" selection-end-column="95" />
                 </state>
               </provider>
             </entry>
@@ -76,53 +53,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/J7/AdvertPet/templates/index/index.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" selection-start-line="3" selection-end-line="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/J7/AdvertPet/templates/base.html.twig">
+            <entry file="file://$PROJECT_DIR$/Final Project/ecommerce/src/Controller/HomeController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/J7/AdvertPet/src/Form/PetType.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#28#47#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/J7/AdvertPet/src/Entity/Pet.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="990">
-                  <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#30#62#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/J7/AdvertPet/templates/add/index.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+                <state relative-caret-position="255">
+                  <caret line="18" selection-start-line="18" selection-end-line="18" />
                 </state>
               </provider>
             </entry>
@@ -147,15 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/J5/commerce/src/Entity/Product.php" />
-        <option value="$PROJECT_DIR$/J5/commerce/templates/index/index.html.twig" />
-        <option value="$PROJECT_DIR$/J5/commerce/src/Entity/Category.php" />
-        <option value="$PROJECT_DIR$/J3/Exercice/Advert/src/DataFixtures/Category.php" />
-        <option value="$PROJECT_DIR$/J3/Exercice/Advert/src/DataFixtures/AppFixtures.php" />
-        <option value="$PROJECT_DIR$/J3/Exercice/Advert/src/DataFixtures/ImageFixture.php" />
-        <option value="$PROJECT_DIR$/J3/Exercice/Advert/src/DataFixtures/CategoryFixture.php" />
-        <option value="$PROJECT_DIR$/J3/Exercice/Advert/src/Form/CategoryFormType.php" />
-        <option value="$PROJECT_DIR$/J5/commerce/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/J3/Exercice/Advert/src/Entity/Category.php" />
         <option value="$PROJECT_DIR$/J3/Exercice/Advert/src/Repository/AdvertRepository.php" />
         <option value="$PROJECT_DIR$/J3/Exercice/Advert/src/Repository/CategoryRepository.php" />
@@ -198,13 +124,22 @@
         <option value="$PROJECT_DIR$/J7/AdvertPet/src/DataFixtures/PetFixture.php" />
         <option value="$PROJECT_DIR$/J7/AdvertPet/src/Controller/AddController.php" />
         <option value="$PROJECT_DIR$/J7/AdvertPet/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/J8/Test/templates/index/index.html.twig" />
+        <option value="$PROJECT_DIR$/J8/Test/src/service.php" />
+        <option value="$PROJECT_DIR$/J8/Test/src/hello.php" />
+        <option value="$PROJECT_DIR$/J8/Test/.env" />
+        <option value="$PROJECT_DIR$/J8/Test/src/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/J8/Test/config/services.yaml" />
+        <option value="$PROJECT_DIR$/Final Project/ecommerce/src/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/Final Project/ecommerce/templates/home/index.html.twig" />
+        <option value="$PROJECT_DIR$/Final Project/ecommerce/templates/base.html.twig" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="228" />
     <option name="y" value="-4" />
     <option name="width" value="1398" />
@@ -227,51 +162,42 @@
             <path>
               <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="J7" type="462c0819:PsiDirectoryNode" />
+              <item name="Final Project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="J7" type="462c0819:PsiDirectoryNode" />
-              <item name="AdvertPet" type="462c0819:PsiDirectoryNode" />
+              <item name="Final Project" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="J7" type="462c0819:PsiDirectoryNode" />
-              <item name="AdvertPet" type="462c0819:PsiDirectoryNode" />
+              <item name="Final Project" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="Final Project" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="Final Project" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="J7" type="462c0819:PsiDirectoryNode" />
-              <item name="AdvertPet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="DataFixtures" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="J7" type="462c0819:PsiDirectoryNode" />
-              <item name="AdvertPet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="J7" type="462c0819:PsiDirectoryNode" />
-              <item name="AdvertPet" type="462c0819:PsiDirectoryNode" />
+              <item name="Final Project" type="462c0819:PsiDirectoryNode" />
+              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="J7" type="462c0819:PsiDirectoryNode" />
-              <item name="AdvertPet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="add" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -284,7 +210,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/J3/Exercice/Advert/templates/advert" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Final Project/ecommerce/public/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -293,12 +219,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Final Project/ecommerce/public/css" />
+      <recent name="$PROJECT_DIR$/Final Project/ecommerce/src" />
+      <recent name="$PROJECT_DIR$/J3/Exercice/Advert/templates/advert" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Final Project/ecommerce/public" />
+      <recent name="$PROJECT_DIR$/Final Project/ecommerce/src" />
       <recent name="$PROJECT_DIR$/J3/Exercice/Advert/src/DataFixtures" />
       <recent name="$PROJECT_DIR$/J4" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/J3/Exercice/Advert/templates/advert" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -327,12 +257,17 @@
       <workItem from="1554715770601" duration="11029000" />
       <workItem from="1554731470897" duration="1143000" />
       <workItem from="1554732753193" duration="128386000" />
-      <workItem from="1555596207075" duration="680000" />
+      <workItem from="1555596207075" duration="12934000" />
+      <workItem from="1556532188034" duration="1878000" />
+      <workItem from="1556538608339" duration="1771000" />
+      <workItem from="1556540584907" duration="1482000" />
+      <workItem from="1556542800900" duration="599000" />
+      <workItem from="1556546110160" duration="607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185447000" />
+    <option name="totallyTimeSpent" value="204038000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,12 +279,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="7" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16639027" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17468214" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4997236" visible="true" weight="0.3149847" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.4997236" visible="true" weight="0.2864424" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5002764" side_tool="true" weight="0.20489296" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32925585" />
@@ -361,11 +296,32 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.32925585" />
-      <window_info active="true" anchor="right" id="Database" order="0" visible="true" weight="0.32946378" />
+      <window_info anchor="right" id="Database" order="0" weight="0.32946378" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16639027" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.4997236" visible="true" weight="0.3149847" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5002764" side_tool="true" weight="0.20489296" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32925585" />
+      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32925585" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.32925585" />
+      <window_info anchor="right" id="Database" order="0" weight="0.32946378" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -411,111 +367,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/J5/commerce/src/DataFixtures/CategoryFixtures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#36#79#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J5/commerce/src/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J5/commerce/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-          <folding>
-            <element signature="e#34#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J3/Exercice/Advert/templates/advert/search.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J3/Exercice/Advert/src/Repository/CategoryRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2/Exemple/formation/src/Twig/CalculExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding>
-            <element signature="e#28#65#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J3/Exercice/Advert/src/DataFixtures/CategoryFixture.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding>
-            <element signature="e#36#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2/Exemple/formation/templates/user/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J2/Exemple/formation/templates/people2/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J3/Exercice/Advert/src/Repository/AdvertRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="43" column="13" selection-start-line="41" selection-start-column="12" selection-end-line="43" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J3/Exercice/Advert/src/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J3/Exercice/Advert/src/Entity/Level.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/J3/Exercice/Advert/src/Entity/Skill.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/J3/Exercice/Advert/src/Entity/Advert.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -788,6 +639,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/J7/AdvertPet/templates/index/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/J7/AdvertPet/src/DataFixtures/PetFixture.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -798,16 +656,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/J7/AdvertPet/templates/index/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/J7/AdvertPet/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="195">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/J7/AdvertPet/src/Form/PetType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="255">
           <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding>
             <element signature="e#28#47#0#PHP" expanded="true" />
@@ -817,7 +675,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/J7/AdvertPet/src/Entity/Pet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
+        <state relative-caret-position="492">
           <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding>
             <element signature="e#30#62#0#PHP" expanded="true" />
@@ -829,16 +687,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J8/Test/src/hello.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J8/Test/src/service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J8/Test/src/Controller/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J8/Test/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
           <folding>
-            <element signature="n#style#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="e#34#48#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/J7/AdvertPet/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/J8/Test/templates/index/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J8/Test/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="60" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/J8/Test/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Project/ecommerce/public/css/bootstrap.css" />
+    <entry file="file://$PROJECT_DIR$/Final Project/ecommerce/public/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/Final Project/ecommerce/public/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Project/ecommerce/templates/home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Project/ecommerce/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="34" column="95" selection-start-line="34" selection-start-column="95" selection-end-line="34" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final Project/ecommerce/src/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
